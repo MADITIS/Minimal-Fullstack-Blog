@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --ff:  'Inter', sans-serif;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff);
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: inline-block;
+    max-width: 100%;
+    height: 100%;
+  }
+  img {
+    object-fit: cover;
+  }
+
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  input {
+    border: none;
+    border: 1px silver solid;
+  }
+
+  textarea,input:focus {
+    outline: none;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+ 
+  .p-2 {
+    padding-block: 2rem;
+  }
+  .p-3 {
+    padding-block: 3rem;
+  }
+  .p-5 {
+    padding-block: 5rem;
+  }
+  .pb-5 {
+    padding-block-start: 5rem;
+  }
+
+
+  /* utils */
+
+.fc-1 > * + * {
+    margin-block-start: 1rem;
+}
+.fc-2 > * + * {
+    margin-block-start: 2rem;
+}
+.fc-3 > * + * {
+    margin-block-start: 2.5rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: var(--flex-dir, row);
+    justify-content: var(--flex-justify, space-between);
+    align-items: var(--flex-align, center);
+    gap: var(--flex-gap, 1.5rem);
+}
+
+.container {
+    width: min(1400px, 97vw);
+    margin-inline: auto;
+    padding-inline: 1rem;
+}

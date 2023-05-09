@@ -1,0 +1,21 @@
+version: '3.9'
+
+services: 
+  app:
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    restart: 
+      always
+
+  db:
+    image: postgrs:15.2-alpine
+    environment:
+      - POSTGRES_USER=mds
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=BlogProductionDB
+      
